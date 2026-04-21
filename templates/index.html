@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniChat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <div id="authScreen" class="auth-screen">
+            <div class="auth-card">
+                <img src="https://i.postimg.cc/LhxcKZKv/logo.png" alt="MiniChat Logo" class="logo">
+                <h1>MiniChat</h1>
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Вход</button>
+                    <button class="tab-btn" data-tab="register">Регистрация</button>
+                </div>
+                <div id="loginForm" class="auth-form active">
+                    <input type="text" id="loginUsername" placeholder="Логин">
+                    <input type="password" id="loginPassword" placeholder="Пароль">
+                    <button id="loginBtn">Войти</button>
+                    <div class="error-msg" id="loginError"></div>
+                </div>
+                <div id="registerForm" class="auth-form">
+                    <input type="text" id="regUsername" placeholder="Логин (от 3 символов)">
+                    <input type="password" id="regPassword" placeholder="Пароль (от 4 символов)">
+                    <button id="registerBtn">Зарегистрироваться</button>
+                    <div class="error-msg" id="regError"></div>
+                </div>
+            </div>
+        </div>
+        <div id="chatScreen" class="chat-screen" style="display: none;">
+            <div class="chat-header">
+                <div class="logo-small">
+                    <img src="https://i.postimg.cc/LhxcKZKv/logo.png" alt="MiniChat" style="height: 32px;">
+                    <span>MiniChat</span>
+                </div>
+                <div class="user-info">
+                    <span id="currentUser"></span>
+                    <button id="logoutBtn" class="logout-btn">🚪 Выйти</button>
+                </div>
+            </div>
+            <div id="messagesContainer" class="messages-container"></div>
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Введите сообщение..." maxlength="500">
+                <button id="sendBtn">📤 Отправить</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+                  </html>
